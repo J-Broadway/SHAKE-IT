@@ -1,0 +1,101 @@
+{
+	Tools = ordered() {
+		gui = Merge {
+			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = {
+				Quality = Input { Value = 8, },
+				ShutterAngle = Input { Value = 200, },
+				Merge = Input { Value = 0, },
+				PerformDepthMerge = Input { Value = 0, },
+				test = Input { Value = -5, },
+				test2 = Input { Value = 1, },
+				xDev = Input { Value = 0.023, },
+				yDev = Input { Value = 0.043, },
+				Speed = Input { Value = 0.354, },
+				Offset = Input { Value = 22, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 330, 16.5 } },
+			UserControls = ordered() {
+				test = {
+					INP_MaxAllowed = 5,
+					INP_Integer = false,
+					INP_MinAllowed = -5,
+					LINKID_DataType = "Number",
+					INPID_InputControl = "ScrewControl",
+					INP_MinScale = -5,
+					INP_MaxScale = 5,
+					LINKS_Name = "test",
+				},
+				test2 = {
+					INP_MaxAllowed = 5,
+					INP_Integer = false,
+					INP_MinAllowed = -5,
+					LINKID_DataType = "Number",
+					INPID_InputControl = "ScrewControl",
+					INP_MinScale = -5,
+					INP_MaxScale = 5,
+					LINKS_Name = "test",
+				},
+				xDev = {
+					INP_MaxAllowed = 1,
+					INP_Integer = false,
+					INPID_InputControl = "ScrewControl",
+					INP_MaxScale = 1,
+					INP_Default = 0.100000001490116,
+					INP_MinScale = 0,
+					INP_MinAllowed = 0,
+					LINKID_DataType = "Number",
+					LINKS_Name = " X Deviation",
+				},
+				yDev = {
+					INP_MaxAllowed = 1,
+					INP_Integer = false,
+					INPID_InputControl = "ScrewControl",
+					INP_MaxScale = 1,
+					INP_Default = 0.100000001490116,
+					INP_MinScale = 0,
+					INP_MinAllowed = 0,
+					LINKID_DataType = "Number",
+					LINKS_Name = "Y Deviation",
+				},
+				Speed = {
+					INP_MaxAllowed = 1,
+					INP_Integer = false,
+					INPID_InputControl = "SliderControl",
+					INP_MaxScale = 1,
+					INP_Default = 0.100000001490116,
+					INP_MinScale = 0,
+					INP_MinAllowed = 0,
+					LINKID_DataType = "Number",
+					LINKS_Name = "Speed",
+				},
+				Offset = {
+					INP_MaxAllowed = 100,
+					INP_Integer = false,
+					INP_MinAllowed = 0,
+					LINKID_DataType = "Number",
+					INPID_InputControl = "SliderControl",
+					INP_MinScale = 0,
+					INP_MaxScale = 100,
+					LINKS_Name = "Randomness",
+				}
+			}
+		},
+		Transform2 = Transform {
+			Inputs = {
+				MotionBlur = Input { Value = 1, },
+				Quality = Input { Value = 6, },
+				ShutterAngle = Input { Value = 360, },
+				CenterBias = Input { Value = 1, },
+				SampleSpread = Input { Value = 0.27, },
+				Center = Input {
+					Value = { 0.449748838631627, 0.507651280488376 },
+					Expression = ":\nfunction shake(x1, x2, phase, speed, func)\n	amplitude 	= ((x1 - x2) / 2)\n	period		= (300 * (2 / 300)^speed)\n	midpoint	= ((x2 + x1) / 2)\n    phase       = phase or 1\n	\n	if func == \"sin\" then\n		shakeit	= amplitude * sin(2 * pi * time / period + pi/phase) + midpoint\n	elseif func == \"cos\" then\n		shakeit	= amplitude * cos(2 * pi * time / period) + midpoint\n	end\n	return shakeit\nend\n\nsinPhase 	= shake(1, 1 + gui.Offset/50, 1, 0.1, \"sin\")\nx1, y1 		= 0.5-gui.xDev, 0.5-gui.yDev\nx2, y2 		= 0.5+gui.xDev, 0.5+gui.yDev\n\nreturn Point(shake(x2, x1, sinPhase, gui.Speed, \"sin\"),\n			 shake(y1, y2, sinPhase, gui.Speed, \"cos\"))",
+				},
+				Edges = Input { Value = 3, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 330, 49.5 } },
+		}
+	}
+}

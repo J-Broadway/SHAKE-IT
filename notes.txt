@@ -1,0 +1,25 @@
+Point(
+	(((0.5+gui.xDev) - (0.5-gui.xDev)) / 2) * sin(2 * pi * time / (300*(2/300)^gui.Speed)) + (((0.5-gui.xDev) + (0.5+gui.xDev)) / 2),
+	(((0.5+gui.yDev) - (0.5-gui.yDev)) / 2) * cos(2 * pi * time / (300*(2/300)^gui.Speed)) + (((0.5-gui.yDev) + (0.5+gui.yDev)) / 2)
+	)
+	
+amplitude * math.sin(2 * math.pi * time / period) + midpoint
+
+Point(((x2-x1)/2) * sin(2*3.14159*time/10)+((x1 + x2)/2), 0.5) 
+	
+:
+function shake(val, func)
+	amplitude 	= (((0.5+val) - (0.5-val))/2)
+	period		= (300*(2/300)^gui.Speed)
+	midpoint	= (((0.5 - val) + (0.5 + val)) / 2)
+	
+	if func == "sin" then
+		shakeit	= amplitude * sin(2 * pi * time / period + pi/gui.Offset) + midpoint
+	else
+		shakeit	= amplitude * cos(2 * pi * time / period) + midpoint
+	end
+	return shakeit
+end
+
+return Point(shake(gui.xDev, "sin"), shake(gui.yDev, "cos"))
+
