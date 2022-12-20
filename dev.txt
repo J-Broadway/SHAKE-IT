@@ -1,0 +1,67 @@
+{
+	Tools = ordered() {
+		dev = dev {
+			ViewInfo = OperatorInfo { Pos = { 460.667, 119.485 } },
+			CtrlWZoom = false,
+			Inputs = {
+				PerformDepthMerge = Input { Value = 0 }
+			},
+			UserControls = ordered() {
+				a = {
+					INPID_InputControl = "SliderControl",
+					INP_Integer = false,
+					LINKID_DataType = "Number",
+					LINKS_Name = "a",
+				},
+				b = {
+					INPID_InputControl = "SliderControl",
+					INP_Integer = false,
+					LINKID_DataType = "Number",
+					LINKS_Name = "b",
+				},
+				c = {
+					INPID_InputControl = "SliderControl",
+					INP_Integer = false,
+					LINKID_DataType = "Number",
+					LINKS_Name = "c",
+				},
+				code = {
+					LINKS_Name = "code",
+					LINKID_DataType = "Text",
+					INPID_InputControl = "TextEditControl",
+					TEC_Wrap = false,
+					TEC_ReadOnly = false,
+				}
+			},
+		}
+	},
+	ActiveTool = "dev"
+}
+
+-- {
+-- 	Tools = ordered() {
+-- 		test = test {
+-- 			ViewInfo = OperatorInfo { Pos = { 460.667, 119.485 } },
+-- 			CtrlWZoom = false,
+-- 			Inputs = {
+-- 				PerformDepthMerge = Input { Value = 0 }
+-- 			},
+-- 			UserControls = ordered() {
+-- 				a = {
+-- 					INPID_InputControl = "SliderControl",
+-- 					INP_Integer = false,
+-- 					LINKID_DataType = "Number",
+-- 					LINKS_Name = "a",
+-- 				},
+-- 				code = {
+-- 					LINKS_Name = "code",
+-- 					LINKID_DataType = "Text",
+-- 					INPID_InputControl = "TextEditControl",
+-- 					TEC_Wrap = false,
+-- 					TEC_ReadOnly = false,
+-- 				}
+-- 			},
+-- 		}
+-- 	},
+-- 	ActiveTool = "test"
+-- }
