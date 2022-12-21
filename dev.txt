@@ -1,67 +1,6 @@
 {
 	Tools = ordered() {
-		dev = dev {
-			ViewInfo = OperatorInfo { Pos = { 460.667, 119.485 } },
-			CtrlWZoom = false,
-			Inputs = {
-				PerformDepthMerge = Input { Value = 0 }
-			},
-			UserControls = ordered() {
-				a = {
-					INPID_InputControl = "SliderControl",
-					INP_Integer = false,
-					LINKID_DataType = "Number",
-					LINKS_Name = "a",
-				},
-				b = {
-					INPID_InputControl = "SliderControl",
-					INP_Integer = false,
-					LINKID_DataType = "Number",
-					LINKS_Name = "b",
-				},
-				c = {
-					INPID_InputControl = "SliderControl",
-					INP_Integer = false,
-					LINKID_DataType = "Number",
-					LINKS_Name = "c",
-				},
-				code = {
-					LINKS_Name = "code",
-					LINKID_DataType = "Text",
-					INPID_InputControl = "TextEditControl",
-					TEC_Wrap = false,
-					TEC_ReadOnly = false,
-				}
-			},
-		}
+		dev = dev { ViewInfo = OperatorInfo { Pos = { 825, 214.5 } }, CtrlWZoom = false, Inputs = { PerformDepthMerge = Input { Value = 0 } }, UserControls = ordered() { a = { INP_MaxAllowed = 1000000, INP_Integer = false, INP_MinAllowed = -1000000, LINKID_DataType = "Number", INPID_InputControl = "SliderControl", INP_MinScale = 0, INP_MaxScale = 1, LINKS_Name = "a", }, b = { INPID_InputControl = "SliderControl", INP_Integer = false, LINKID_DataType = "Number", LINKS_Name = "b", }, c = { INPID_InputControl = "SliderControl", INP_Integer = false, LINKID_DataType = "Number", LINKS_Name = "c", }, code = { TEC_ReadOnly = false, LINKID_DataType = "Text", LINKS_Name = "code", INPID_InputControl = "TextEditControl", TEC_Wrap = false, }, btn_a = { INP_MaxAllowed = 1, INP_Integer = true, INPID_InputControl = "ButtonControl", BTNCS_Execute = "dev.btn_a = 0", INP_MaxScale = 1, INP_Default = 1, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Button", } }, }
 	},
 	ActiveTool = "dev"
 }
-
--- {
--- 	Tools = ordered() {
--- 		test = test {
--- 			ViewInfo = OperatorInfo { Pos = { 460.667, 119.485 } },
--- 			CtrlWZoom = false,
--- 			Inputs = {
--- 				PerformDepthMerge = Input { Value = 0 }
--- 			},
--- 			UserControls = ordered() {
--- 				a = {
--- 					INPID_InputControl = "SliderControl",
--- 					INP_Integer = false,
--- 					LINKID_DataType = "Number",
--- 					LINKS_Name = "a",
--- 				},
--- 				code = {
--- 					LINKS_Name = "code",
--- 					LINKID_DataType = "Text",
--- 					INPID_InputControl = "TextEditControl",
--- 					TEC_Wrap = false,
--- 					TEC_ReadOnly = false,
--- 				}
--- 			},
--- 		}
--- 	},
--- 	ActiveTool = "test"
--- }
