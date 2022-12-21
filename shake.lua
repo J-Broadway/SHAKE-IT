@@ -4,7 +4,6 @@ function expCurve(x, slope, a, b)
     slope 	= slope or 100
 	a		= a or 0
 	b		= b or 1
-    -- y 		= (slope^x -1)/(slope-1)
 	y		= a + (b-a)*((slope^x-1)/(slope-1))
     return y
 end
@@ -12,7 +11,6 @@ end
 -- Shake Function
 function shake(x1, x2, phase, speed, func)
 	amplitude 	= ((x1 - x2) / 2)
-	-- period		= (300 * (2 / 300)^speed)
 	period		= expCurve(speed, .01, 100, 2.1)
 	midpoint	= ((x2 + x1) / 2)
     phase       = phase or 1
