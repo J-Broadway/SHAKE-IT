@@ -28,11 +28,11 @@ x2, y2 		= expCurve(gui.xDev), expCurve(gui.yDev)
 x1, y1 		= 0.5-x1, 0.5-y1
 x2, y2 		= 0.5+x2, 0.5+y2
 
-xPhase      = dev.randPhase.Value
-yPhase      = dev.randPhase2.Value
+xPhase      = dev.phase.Value
+yPhase      = dev.phase2.Value
 
-if gui.Offset == 0 then
-    return Point(shake(x2, x1, 1, gui.Speed, "sin"), shake(y1, y2, 1, gui.Speed, "cos"))
+if gui.Speed == 0 then
+	return Point(0.5, 0.5)
 else
-    return Point(shake(x2, x1, xPhase, gui.Speed, "sin"), shake(y1, y2, yPhase, gui.Speed, "cos"))
+	return Point(shake(x2, x1, xPhase, gui.Speed, "sin"), shake(y1, y2, yPhase, gui.Speed, "cos"))
 end

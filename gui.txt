@@ -1,0 +1,41 @@
+{
+	Tools = ordered() {
+		gui = Merge {
+			CtrlWZoom = false,
+			NameSet = true,
+			Inputs = {
+				Quality = Input { Value = 8, },
+				ShutterAngle = Input { Value = 200, },
+				Merge = Input { Value = 0, },
+				PerformDepthMerge = Input { Value = 0, },
+				xDev = Input { Value = 0.369, },
+				yDev = Input { Value = 0.254, },
+				Speed = Input { Value = 0.063, },
+				Offset = Input { Value = 0.669, },
+				Seed = Input { Value = 2599, },
+			},
+			ViewInfo = OperatorInfo { Pos = { 385, 115.5 } },
+			UserControls = ordered() { xDev = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "ScrewControl", INP_MaxScale = 1, INP_Default = 0.100000001490116, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = " X Deviation", }, yDev = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "ScrewControl", INP_MaxScale = 1, INP_Default = 0.100000001490116, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Y Deviation", }, Speed = { INP_MaxAllowed = 1, INP_Integer = false, INPID_InputControl = "SliderControl", INP_MaxScale = 1, INP_Default = 0.100000001490116, INP_MinScale = 0, INP_MinAllowed = 0, LINKID_DataType = "Number", LINKS_Name = "Speed", }, Offset = {
+					LINKS_Name = "Jitter",
+					LINKID_DataType = "Number",
+					INPID_InputControl = "SliderControl",
+					INP_Integer = false,
+					INP_MinScale = 0,
+					INP_MaxScale = 1,
+					INP_MinAllowed = 0,
+					INP_MaxAllowed = 1,
+				}, Seed = {
+					INP_MaxAllowed = 10000,
+					INP_Integer = false,
+					INPID_InputControl = "SliderControl",
+					IC_Steps = 1,
+					INP_MaxScale = 10000,
+					INP_MinScale = 1,
+					INP_MinAllowed = 1,
+					LINKID_DataType = "Number",
+					LINKS_Name = "Seed",
+				} }
+		}
+	},
+	ActiveTool = "gui"
+}

@@ -25,4 +25,8 @@ function Phase(i, s)
     return movement
 end
 
-return Phase(gui.Offset, gui.Seed)
+if gui.Offset == 0 or gui.Speed == 0 then
+    return 1
+else
+    return Phase(gui.Offset, gui.Seed)
+end
