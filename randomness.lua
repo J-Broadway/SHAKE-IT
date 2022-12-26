@@ -1,5 +1,5 @@
 :
-function randPhase(i, s)
+function Phase(i, s)
     comp_legnth     = comp.RenderEnd
     frame_rate      = ceil(comp:GetPrefs("Comp.FrameFormat.Rate"))
 
@@ -25,4 +25,4 @@ function randPhase(i, s)
     return movement
 end
 
-return randPhase(gui.Offset, gui.Seed)
+return Phase(gui.Offset, gui.Seed)
