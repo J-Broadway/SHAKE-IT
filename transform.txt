@@ -1,0 +1,17 @@
+{
+	Tools = ordered() {
+		Transform1 = Transform {
+			CtrlWZoom = false,
+			Inputs = {
+				Center = Input {
+					Value = { 0.501734421934168, 0.494352311368456 },
+					Expression = ":\nx       = dofile(\"SHAKEIT/SHAKEIT.lua\")\nblend   = gui.xyBlend * gui.globalBlend\n\nif gui.chkAdvanced == 0 then\n    local xphase        = x.Phase(time, gui.Offset, gui.Seed)\n    local yphase        = x.Phase(time, gui.Offset, gui.Seed + 1)\n\n    local xyShake       = x.shake(gui.xyDev * gui.globalBlend, gui.xyDev * gui.globalBlend, xphase, gui.Speed, \"sin\")\n    local xyShake2      = x.shake(gui.xyDev * gui.globalBlend, gui.xyDev * gui.globalBlend, yphase, gui.Speed, \"cos\") \n    return Point(xyShake, xyShake2)\nend\nif gui.chkAdvanced == 1 then\n    local xphase        = x.Phase(time, gui.xyPhase, gui.xySeed)\n    local yphase        = x.Phase(time, gui.xyPhase, gui.xySeed + 1)\n\n    local xyShake       = x.shake(gui.xDev * blend, gui.xDev * blend, xphase, gui.xySpeed, \"sin\")\n    local xyShake2      = x.shake(gui.yDev * blend, gui.yDev * blend, yphase, gui.xySpeed, \"cos\")\n\n    return Point(xyShake, xyShake2)\nend",
+				},
+				Size = Input { Expression = ":\nx       = dofile(\"SHAKEIT/SHAKEIT.lua\")\nblend   = gui.zoomBlend * gui.globalBlend\n\nif gui.chkAdvanced ~= 1 then\n    phase       = x.Phase(time, gui.Offset, gui.Seed + 2)\n    shake       = x.shake(gui.zDev * gui.globalBlend, gui.zDev * gui.globalBlend, phase, gui.Speed, \"sin\", 1)\n    return shake\nelse\n    phase       = x.Phase(time, gui.zoomPhase, gui.zoomSeed + 2)\n    shake       = x.shake(gui.zoominDev * blend, gui.zoomoutDev * blend, phase, gui.zoomSpeed, \"sin\", 1)\n    return shake\nend", },
+				Angle = Input { Expression = ":\nx       = dofile(\"SHAKEIT/SHAKEIT.lua\")\nblend   = gui.rotationBlend * gui.globalBlend\n\nif gui.chkAdvanced ~= 1 then\n    phase       = x.Phase(time, gui.Offset, gui.Seed + 3)\n    shake       = x.shake(gui.rDev * gui.globalBlend, gui.rDev * gui.globalBlend, phase, gui.Speed, \"sin\", 0, \"No\")\n    return shake\nelse\n    phase       = x.Phase(time, gui.rotationPhase, gui.rotationSeed + 3)\n    shake       = x.shake(gui.clockwiseDev * blend, gui.counterDev * blend, phase, gui.rotationSpeed, \"sin\", 0, \"No\")\n    return shake\nend", },
+			},
+			ViewInfo = OperatorInfo { Pos = { 225.356, 31.9833 } },
+		}
+	},
+	ActiveTool = "Transform1"
+}
