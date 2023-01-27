@@ -22,7 +22,7 @@
 					INP_MinAllowed = 0,
 					LINKID_DataType = "Number",
 					LINKS_Name = "X/Y Deviation",
-					ICS_ControlPage = "Simple",
+					ICS_ControlPage = "General",
 				},
 				zDev = {
 					INP_MaxAllowed = 1,
@@ -34,7 +34,7 @@
 					INP_MinAllowed = 0,
 					LINKID_DataType = "Number",
 					LINKS_Name = "Size Deviation",
-					ICS_ControlPage = "Simple",
+					ICS_ControlPage = "General",
 				},
 				rDev = {
 					INP_MaxAllowed = 360,
@@ -46,7 +46,7 @@
 					INP_MinAllowed = 0,
 					LINKID_DataType = "Number",
 					LINKS_Name = "Rotation Deviation",
-					ICS_ControlPage = "Simple",
+					ICS_ControlPage = "General",
 				},
 				Speed = {
 					INP_MaxAllowed = 1,
@@ -58,7 +58,7 @@
 					INP_MinAllowed = 0,
 					LINKID_DataType = "Number",
 					LINKS_Name = "Speed",
-					ICS_ControlPage = "Simple",
+					ICS_ControlPage = "General",
 				},
 				Offset = {
 					INP_MaxAllowed = 0.99,
@@ -69,7 +69,7 @@
 					INP_MinScale = 0,
 					INP_MaxScale = 0.99,
 					LINKS_Name = "Jitter",
-					ICS_ControlPage = "Simple",
+					ICS_ControlPage = "General",
 				},
 				Seed = {
 					INP_MaxAllowed = 10000,
@@ -81,7 +81,7 @@
 					INP_MinAllowed = 1,
 					LINKID_DataType = "Number",
 					LINKS_Name = "Seed",
-					ICS_ControlPage = "Simple",
+					ICS_ControlPage = "General",
 				},
 				globalBlend = {
 					INP_MaxAllowed = 1,
@@ -93,7 +93,7 @@
 					INP_MinScale = 0,
 					INP_MaxScale = 1,
 					LINKS_Name = "Global Blend",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				chkAdvanced = {
 					LINKS_Name = "Use Advanced Controls",
@@ -105,7 +105,7 @@
 					INP_MinAllowed = -1000000,
 					INP_MaxAllowed = 1000000,
 					CBC_TriState = false,
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				xDev = { 
 					INP_MaxAllowed = 1,
@@ -117,7 +117,7 @@
 					INP_MinAllowed = 0,
 					LINKID_DataType = "Number",
 					LINKS_Name = " X Deviation",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				yDev = {
 					INP_MaxAllowed = 1,
@@ -129,7 +129,7 @@
 					INP_MinAllowed = 0,
 					LINKID_DataType = "Number",
 					LINKS_Name = "Y Deviation",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				xySpeed = {
 					INP_MaxAllowed = 1,
@@ -140,7 +140,7 @@
 					INP_MinScale = 0,
 					INP_MaxScale = 1,
 					LINKS_Name = "Speed",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				xyPhase = {
 					INP_MaxAllowed = 0.99,
@@ -151,7 +151,7 @@
 					INP_MinScale = 0,
 					INP_MaxScale = 0.99,
 					LINKS_Name = "Jitter",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				xySeed = {
 					INP_MaxAllowed = 10000,
@@ -163,7 +163,7 @@
 					INP_MinAllowed = 1,
 					LINKID_DataType = "Number",
 					LINKS_Name = "Seed",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				xyBlend = {
 					INP_MaxAllowed = 1,
@@ -175,7 +175,7 @@
 					INP_MinScale = 0,
 					INP_MaxScale = 1,
 					LINKS_Name = "Blend",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				zoominDev = {
 					INP_MaxAllowed = 1,
@@ -187,7 +187,7 @@
 					INP_MinAllowed = 0,
 					LINKID_DataType = "Number",
 					LINKS_Name = "In",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				zoomoutDev = {
 					INP_MaxAllowed = 1,
@@ -199,7 +199,7 @@
 					INP_MinAllowed = 0,
 					LINKID_DataType = "Number",
 					LINKS_Name = "Out",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				zoomSpeed = {
 					INP_MaxAllowed = 1,
@@ -210,7 +210,7 @@
 					INP_MinScale = 0,
 					INP_MaxScale = 1,
 					LINKS_Name = "Speed",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				zoomPhase = {
 					INP_MaxAllowed = 0.99,
@@ -221,7 +221,7 @@
 					INP_MinScale = 0,
 					INP_MaxScale = 0.99,
 					LINKS_Name = "Jitter",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				zoomSeed = {
 					INP_MaxAllowed = 10000,
@@ -233,7 +233,7 @@
 					INP_MinAllowed = 1,
 					LINKID_DataType = "Number",
 					LINKS_Name = "Seed",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				zoomBlend = {
 					INP_MaxAllowed = 1,
@@ -245,7 +245,7 @@
 					INP_MinScale = 0,
 					INP_MaxScale = 1,
 					LINKS_Name = "Blend",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				clockwiseDev = {
 					INP_MaxAllowed = 360,
@@ -257,7 +257,7 @@
 					INP_MinAllowed = 0,
 					LINKID_DataType = "Number",
 					LINKS_Name = "Right",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				counterDev = {
 					INP_MaxAllowed = 360,
@@ -269,7 +269,7 @@
 					INP_MinAllowed = 0,
 					LINKID_DataType = "Number",
 					LINKS_Name = "Left",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				rotationSpeed = {
 					INP_MaxAllowed = 1,
@@ -280,7 +280,7 @@
 					INP_MinScale = 0,
 					INP_MaxScale = 1,
 					LINKS_Name = "Speed",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				rotationPhase = {
 					INP_MaxAllowed = 0.99,
@@ -291,7 +291,7 @@
 					INP_MinScale = 0,
 					INP_MaxScale = 0.99,
 					LINKS_Name = "Jitter",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				rotationSeed = {
 					INP_MaxAllowed = 10000,
@@ -303,7 +303,7 @@
 					INP_MinAllowed = 1,
 					LINKID_DataType = "Number",
 					LINKS_Name = "Seed",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
 				},
 				rotationBlend = {
 					INP_MaxAllowed = 1,
@@ -315,7 +315,15 @@
 					INP_MinScale = 0,
 					INP_MaxScale = 1,
 					LINKS_Name = "Blend",
-					ICS_ControlPage = "Advanced",
+					ICS_ControlPage = "General",
+				},
+				advReset = {
+					INP_Integer = false,
+					LINKID_DataType = "Number",
+					BTNCS_Execute = "tool.xDev = 0 tool.yDev = 0 tool.xySpeed = 0 tool.xyPhase = 0 tool.xySeed = 1 tool.xyBlend = 1",
+					INPID_InputControl = "ButtonControl",
+					LINKS_Name = "Reset Controls",
+					ICS_ControlPage = "General",
 				}
 			}
 		}
